@@ -4,82 +4,95 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/app_main_gradient"
+    android:orientation="vertical"
+    android:paddingHorizontal="25dp"
     tools:context=".activity.SignInActivity">
+
     <LinearLayout
-        android:orientation="vertical"
-        android:padding="25dp"
-        android:background="@drawable/app_main_gradient"
-        android:gravity="center"
+        android:id="@+id/llWrapper"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:fontFamily="@font/custom_font"
             android:text="@string/str_instagram"
-            android:textColor="#ffffff"
-            android:textSize="30sp"/>
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
         <EditText
-            android:id="@+id/et_email"
+            android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@drawable/rounded_corners"
+            android:background="@drawable/view_rounded_background"
             android:hint="@string/str_email"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:textColor="#ffffff"
+            android:paddingHorizontal="15dp"
+            android:textColor="@color/white"
             android:textColorHint="#90ffffff"
             android:textSize="16sp" />
+
         <EditText
-            android:id="@+id/et_password"
+            android:id="@+id/edtPassword"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/rounded_corners"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/view_rounded_background"
             android:hint="@string/str_password"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:textColor="#ffffff"
+            android:paddingHorizontal="15dp"
+            android:textColor="@color/white"
             android:textColorHint="#90ffffff"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/b_signin"
+            android:id="@+id/btnSignIn"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
-            android:background="@drawable/rounded_corners"
+            android:background="@drawable/view_rounded_background"
             android:text="@string/str_signin"
             android:textAllCaps="false"
-            android:textColor="#ffffff"
+            android:textColor="@color/white"
             android:textSize="16sp"
+            android:textStyle="bold"
             app:backgroundTint="@null" />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="right|center_vertical">
+    </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Don`t you have an account?"
-                android:textColor="#ffffff"
-                android:textSize="16sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="end"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llWrapper">
 
-            <TextView
-                android:id="@+id/tv_signup"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:paddingLeft="10dp"
-                android:text="@string/str_signup"
-                android:textColor="#ffffff"
-                android:textSize="17sp"
-                android:textStyle="bold" />
-        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_donot_account"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
 
-
-
+        <TextView
+            android:id="@+id/tvSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/str_signup"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
